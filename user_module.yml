@@ -1,0 +1,7 @@
+- 
+  name: user module
+  hosts: client2
+  tasks: 
+    - 
+      name: "creating user" 
+      user: name=demouser state=absent password="demo"

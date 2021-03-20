@@ -1,0 +1,14 @@
+- 
+  name: service module with condition
+  hosts: client2
+  vars: 
+     age: 18
+  tasks: 
+    - 
+      name: create directory
+      command: mkdir /home/ec2-user/ansible_testing
+      when: age == 18
+    - 
+      name: create directory 
+      command: mkdir /home/ec2-user/ansible_new_testing
+      when: age > 18
